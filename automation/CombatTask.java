@@ -34,7 +34,7 @@ public class CombatTask {
                         sleep(300 + gaussian(100));
                     }
                     // Eat if health < 6 and have food
-                    if (mc.thePlayer.getHealth() < 6.0f) {
+                    if (mc.thePlayer.getHealth() < 5.0f) {
                         for (int i=0; i<9; i++) {
                             var stack = mc.thePlayer.inventory.getStackInSlot(i);
                             if (stack != null && stack.getItem() instanceof ItemFood) {
