@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "https://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = "1.0"
+group = "com.potatohive"
+archivesBaseName = "PotatoHive"
+
+sourceCompatibility = targetCompatibility = '1.8'
+
+minecraft {
+    version = "1.8.9-11.15.1.2318-1.8.9"
+    runDir = "run"
+    mappings = "stable_20"
+}
+
+dependencies {
+    // Forge is provided by the client – no extra deps needed
+}
+
+jar {
+    manifest {
+        attributes 'FMLCorePlugin': 'com.potatohive.client.PotatoHive'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+    }
+}
+
+// Force Gradle 6.9 for compatibility
+wrapper {
+    gradleVersion = '6.9'
+}
