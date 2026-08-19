@@ -29,3 +29,4 @@ jobs:
       with:
         name: PotatoHive-1.0
         path: build/libs/*.jar
+# Force rebuild
