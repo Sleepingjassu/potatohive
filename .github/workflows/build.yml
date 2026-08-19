@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04  # Older Ubuntu for better Java 8 compatibility
 
     steps:
     - uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x gradlew
     
-    - name: Build with Gradle wrapper
+    - name: Build with Gradle
       run: ./gradlew build --no-daemon
     
     - name: Upload JAR
