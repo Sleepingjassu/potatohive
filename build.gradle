@@ -25,10 +25,13 @@ minecraft {
     makeObfSourceJar = false
 }
 
+dependencies {
+    // No extra dependencies needed
+}
+
 jar {
     manifest {
         attributes(
-            'FMLCorePlugin': 'com.potatohive.client.PotatoHive',
             'FMLCorePluginContainsFMLMod': 'true'
         )
     }
